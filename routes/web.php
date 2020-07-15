@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/wx/token','TestController@gettoken');
+
+//获取微信access_token的路由
+Route::get('/wx/token','TestController@getToken');

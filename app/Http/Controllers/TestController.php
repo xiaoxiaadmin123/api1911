@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function gettoken(){
+
+    public function getToken(){
 //        appid
         $appid="wx3f3cf034c7d7b7f8";
 //        appsecret
@@ -18,8 +19,18 @@ class TestController extends Controller
 //    输出
         echo $cont;
 
+    }
+
+//    curl获取方式
+    public function getCurl(){
+
+
+
+
 
 
     }
+
+
 }
 
