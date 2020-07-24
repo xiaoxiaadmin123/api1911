@@ -79,6 +79,43 @@ class TestController extends Controller
     }
 
 
+    /*
+     * 接口登录
+     * */
+    public function login(Request $request)
+    {
+
+        $email = $request->post('email');
+        $pass = $request->post('pass');
+
+//        验证用户名密码
+
+
+
+    }
+
+
+
+    public function enc(){
+        $data = "Hello world";//加密的原内容
+        $method = "AES-256-CBC";//密码学方式
+        $key = "1911api";//秘钥
+        $options = OPENSSL_RAW_DATA;//加密补全的选项
+        $iv = "aaaabbbbccccdddd";//初始化向量
+        $enc_data = openssl_encrypt($data,$method,$key,$options,$iv);//加密
+
+        $url = "http://www.1911.com/test/dec";
+        $b64 = base64_encode($enc_data);
+
+        $www = $url."?data=".$b64;
+
+        $response = file_get_contents($www);
+
+        echo $response;
+
+    }
+
+
 
 
 
