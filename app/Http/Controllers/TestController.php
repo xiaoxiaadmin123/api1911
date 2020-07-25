@@ -95,6 +95,7 @@ class TestController extends Controller
     }
 
 
+//对称加密
 
     public function enc(){
         $data = "Hello world";//加密的原内容
@@ -114,6 +115,7 @@ class TestController extends Controller
         echo $response;
 
     }
+
 
 
 
